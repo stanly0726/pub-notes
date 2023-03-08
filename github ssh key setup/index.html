@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Github ssh key setup - 柳芭大書庫</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="mkdocs-1.4.2, mkdocs-gitbook-1.0.7" name="generator"/>
+<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="true" name="HandheldFriendly">
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta href="" rel="next">
+<link href="../css/style.min.css" rel="stylesheet"/>
+</meta></meta></head>
+<body>
+<div class="book">
+<div class="book-summary">
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a class="custom-link" href=".." target="_blank">柳芭大書庫</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="..">Obsidian Notes</a>
+<li class="chapter active" data-path="github%20ssh%20key%20setup/">
+<a href="./">Github ssh key setup</a>
+<li class="divider"></li>
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</li></li></ul>
+</nav>
+</div> <!-- end of book-summary -->
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="."></a>
+</h1>
+</div> <!-- end of book-header -->
+<div class="page-wrapper" role="main" tabindex="-1">
+<div class="page-inner">
+<section class="normal markdown-section">
+<h1 id="github-ssh-key-setup">Github ssh key setup<a class="headerlink" href="#github-ssh-key-setup" title="Permanent link">¶</a></h1>
+<h2 id="generating-a-new-ssh-key">Generating a new ssh key<a class="headerlink" href="#generating-a-new-ssh-key" title="Permanent link">¶</a></h2>
+<pre><code class="language-shell">ssh-keygen -t ed25519 -C "your_email@example.com"
+</code></pre>
+<p>or, if your system doesn’t support Ed25519</p>
+<pre><code class="language-shell">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+</code></pre>
+<h2 id="adding-your-ssh-key-to-the-ssh-agent">Adding your ssh key to the ssh-agent<a class="headerlink" href="#adding-your-ssh-key-to-the-ssh-agent" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>start the ssh-agent in the backgroun</p>
+<p><code>shell
+eval "$(ssh-agent -s)"</code></p>
+</li>
+<li>
+<p>add your ssh <strong>private key</strong> to the ssh-agent If you created your key with a different name, replace <em>id_ed25519</em> in the command with the name of your private key file.</p>
+<p><code>shell
+ssh-add ~/.ssh/id_ed25519</code></p>
+</li>
+<li>
+<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">add the ssh <strong>public key</strong> to your github account</a></p>
+</li>
+</ol>
+</section>
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+</div> <!-- end of body-inner -->
+</div> <!-- end of book-body -->
+<script src="../js/main.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../js/gitbook.min.js"></script>
+<script src="../js/theme.min.js"></script>
+</div></body>
+</html>
