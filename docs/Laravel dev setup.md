@@ -5,12 +5,6 @@ there are two options you can choose from
 1. Develop on your local windows machine
 2. Develop on Ubuntu virtual server
 
-## Develop on your local windows machine
-
-1. download laragon
-2. you might need you upgrade php or node
-3. steps are pretty similar with linux, **use the terminal that comes with laragon**
-
 ## Develop on Ubuntu virtual server
 
 first connect to wireguard vpn, then you can access the server terminal with VMware ESXi web portal with vmrc or with ssh, instructions below will assume you have access to terminal, if you have difficauly doing so, you can contact me personally.
@@ -81,7 +75,7 @@ what it does is when you send a request to your computer at port X, it will forw
 ssh -L 5173:localhost:5173 -L 8000:localhost:8000 <your_username>@192.168.0.119
 ```
 
-then you should be able to see the webpage with browser on your computer at http://localhost:8000
+then you should be able to see the webpage with browser on your computer at [http://localhost:8000]
 
 ### expose servers with ip
 
@@ -96,8 +90,15 @@ then you should be able to see the webpage with browser on your computer at http
     ```json
     "dev": "vite --host"
     ```
+
 3. start vite dev server
 
         npm run dev
 
-now you should be able to see the webpage with browser on your computer at http://192.168.0.119:8000
+now you should be able to see the webpage with browser on your computer at [http://192.168.0.119:8000]
+
+## Develop on your local windows machine
+
+1. download laragon
+2. you might need you upgrade php or node
+3. steps are pretty similar with linux, **use the terminal that comes with laragon**
