@@ -75,7 +75,7 @@ what it does is when you send a request to your computer at port X, it will forw
 ssh -L 5173:localhost:5173 -L 8000:localhost:8000 <your_username>@192.168.0.119
 ```
 
-then you should be able to see the webpage with browser on your computer at [http://localhost:8000]
+then you should be able to see the webpage with browser on your computer at <http://localhost:8000>
 
 ### expose servers with ip
 
@@ -95,7 +95,7 @@ then you should be able to see the webpage with browser on your computer at [htt
 
         npm run dev
 
-now you should be able to see the webpage with browser on your computer at [http://192.168.0.119:8000]
+now you should be able to see the webpage with browser on your computer at <http://192.168.0.119:8000>
 
 ## Develop on your local windows machine
 
